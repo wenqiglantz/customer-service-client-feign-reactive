@@ -1,0 +1,42 @@
+server:
+  port: 8600
+  servlet:
+    context-path: /
+
+customer-service:
+  http-client:
+    read-timeout: 3000
+    write-timeout: 3000
+    connect-timeout: 3000
+    response-timeout: 3000
+  retry:
+    max-retry: 3
+    retry-interval: 3000
+  urls:
+    base-url: http://localhost:8500/
+    create-customer-url: /customers
+    update-customer-url: /customers/{customerId}
+    get-customer-url: /customers/{customerId}
+    delete-customer-url: /customers/{customerId}
+
+logging:
+  level:
+    com.github.wenqiglantz.service.customerserviceclient.customerclient: TRACE
+
+# Spring
+spring:
+  jackson: 
+    default-property-inclusion: NON_NULL
+
+management:
+  endpoints:
+    web:
+      base-path: /monitoring
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: 'ALWAYS'
+  health: 
+    circuitbreakers: 
+      enabled: true
