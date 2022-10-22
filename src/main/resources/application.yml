@@ -13,7 +13,7 @@ customer-service:
     max-retry: 3
     retry-interval: 3000
   urls:
-    base-url: http://localhost:8500/
+    base-url: http://customer-service-url:8500/
     create-customer-url: /customers
     update-customer-url: /customers/{customerId}
     get-customer-url: /customers/{customerId}
