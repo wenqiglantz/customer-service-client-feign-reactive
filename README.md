@@ -4,4 +4,4 @@
 
 Spring Boot app to demonstrate how to use Feign Reactive to consume REST APIs.
 
-Medium link to come.
+For details, refer to my Medium story [Feign Reactive — My Preferred Solution for REST API Consumption](https://betterprogramming.pub/feign-reactive-my-preferred-solution-for-rest-api-consumption-5d79a283b24f?sk=2f11d1ad220fb9fc6b2d3f01171cd323).
